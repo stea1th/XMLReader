@@ -61,6 +61,27 @@ namespace XMLReaderConsole.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xs:schema xmlns=&quot;http://javaops.ru&quot;
+        ///           xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;
+        ///           targetNamespace=&quot;http://javaops.ru&quot;
+        ///           elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot;&gt;
+        ///
+        ///    &lt;xs:element name=&quot;Payload&quot;&gt;
+        ///        &lt;xs:complexType&gt;
+        ///            &lt;xs:sequence&gt;
+        ///                &lt;xs:element name=&quot;Projects&quot;&gt;
+        ///                    &lt;xs:complexType&gt;
+        ///                        &lt;xs:sequence minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;&gt;
+        ///     [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        /// </summary>
+        internal static string payload {
+            get {
+                return ResourceManager.GetString("payload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die &lt;Payload xmlns=&quot;http://javaops.ru&quot;
         ///         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
         ///         xsi:schemaLocation=&quot;http://javaops.ru payload.xsd&quot;&gt;
@@ -78,27 +99,6 @@ namespace XMLReaderConsole.Properties {
         internal static string payload1 {
             get {
                 return ResourceManager.GetString("payload1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-        ///&lt;xs:schema xmlns=&quot;http://javaops.ru&quot;
-        ///           xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;
-        ///           targetNamespace=&quot;http://javaops.ru&quot;
-        ///           elementFormDefault=&quot;qualified&quot; attributeFormDefault=&quot;unqualified&quot;&gt;
-        ///
-        ///    &lt;xs:element name=&quot;Payload&quot;&gt;
-        ///        &lt;xs:complexType&gt;
-        ///            &lt;xs:sequence&gt;
-        ///                &lt;xs:element name=&quot;Projects&quot;&gt;
-        ///                    &lt;xs:complexType&gt;
-        ///                        &lt;xs:sequence minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;&gt;
-        ///     [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
-        /// </summary>
-        internal static string payload2 {
-            get {
-                return ResourceManager.GetString("payload2", resourceCulture);
             }
         }
     }
