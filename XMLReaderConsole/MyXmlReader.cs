@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Linq;
+using System.Xml.XPath;
+using XMLReaderConsole.Helpers;
 
 namespace XMLReaderConsole
 {
@@ -25,6 +28,18 @@ namespace XMLReaderConsole
             
             
             Console.ReadKey();
+        }
+
+        public static void TestXPath()
+        {
+            var document = Properties.Resources.payload1;
+            var xdoc = XDocument.Load(document.ToMemoryStream());
+            var xName = XName.Get("Group", "http://javaops.ru");
+            var e = xdoc.Element(xName);
+            Console.WriteLine(e?.Attribute("name"));
+            Console.ReadKey();
+
+
         }
 
 

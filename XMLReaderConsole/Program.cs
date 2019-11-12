@@ -14,10 +14,13 @@ namespace XMLReaderConsole
         static void Main(string[] args)
         {
             //MyXmlReader reader = new MyXmlReader();
+            //MyXmlReader.TestXPath();
+
             //reader.TestXmlReader();
             var document = Properties.Resources.payload1;
             var payload = document.ParseXML<Payload>();
-            foreach(PayloadProject project in payload.Projects) {
+            foreach (PayloadProject project in payload.Projects)
+            {
                 //project.Group.
                 Console.WriteLine(project.name);
             }
